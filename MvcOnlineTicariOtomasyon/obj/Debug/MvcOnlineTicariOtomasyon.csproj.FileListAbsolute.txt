@@ -1,0 +1,2 @@
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.AssemblyReference.cache
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CoreCompileInputs.cache

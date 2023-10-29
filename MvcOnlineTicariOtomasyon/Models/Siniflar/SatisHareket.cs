@@ -13,7 +13,6 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         //ürün 
         //cari 
         //personel
-
         public DateTime Tarih{ get; set; }
         public int Adet { get; set; }
         public decimal Fiyat { get; set; }

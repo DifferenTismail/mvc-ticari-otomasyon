@@ -10,12 +10,15 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
     {
         [Key]
         public int SatisID { get; set; }
-        //ürün 
+        //ürün  
         //cari 
         //personel
         public DateTime Tarih{ get; set; }
         public int Adet { get; set; }
         public decimal Fiyat { get; set; }
         public decimal ToplamTutar{ get; set; }
+        public ICollection<Urun> Uruns { get; set; }
+        public ICollection<Cariler> Carilers { get; set; }
+        public ICollection<Personel> Peronels { get; set; }
     }
 }

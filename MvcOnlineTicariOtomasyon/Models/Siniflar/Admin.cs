@@ -9,7 +9,6 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 {
     public class Admin
     {
-
         [Key]
         public int AdminID { get; set; }
 

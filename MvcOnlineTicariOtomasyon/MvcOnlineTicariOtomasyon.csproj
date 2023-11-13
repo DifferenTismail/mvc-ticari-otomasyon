@@ -282,6 +282,7 @@
     <Content Include="Web\src\scss\variables\_spacing.scss" />
     <Content Include="Web\src\scss\_global.scss" />
     <Content Include="Web\src\scss\_variables.scss" />
+    <Content Include="Views\Kategori\KategoriEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

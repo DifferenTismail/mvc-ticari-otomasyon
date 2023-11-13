@@ -15,5 +15,17 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler =c.Kategoris.ToList();
             return View(degerler);
         }
+        [HttpGet]
+        //form yüklendiğinde bura çalışıcak
+        public ActionResult KategoriEkle() {
+            return View();
+        }
+        [HttpPost]
+        //butona basıldığında bura çalışıcak
+        public ActionResult KategoriEkle(Kategori k) {
+            c.Kategoris.Add(k);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

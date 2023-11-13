@@ -27,5 +27,12 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        //veri tabanından kategori silmek için gereken kodlar
+        public ActionResult KategoriSil(int id) {
+            var kate = c.Kategoris.Find(id);
+            c.Kategoris.Remove(kate);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

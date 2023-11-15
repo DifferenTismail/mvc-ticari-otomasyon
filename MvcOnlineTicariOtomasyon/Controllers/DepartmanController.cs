@@ -54,5 +54,9 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             ViewBag.d = dpt;
             return View(degerler);
         }
+        //departmandaki personelin satışlarını ekrana yazdırtan kodlar
+        public ActionResult DepartmanPersonelSatis (int id) {
+            return View();
+        }
     }
 }

@@ -291,6 +291,7 @@
     <Content Include="Views\Urun\UrunGetir.cshtml" />
     <Content Include="Views\Departman\Index.cshtml" />
     <Content Include="Views\Departman\DepartmanEkle.cshtml" />
+    <Content Include="Views\Departman\DepartmanGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

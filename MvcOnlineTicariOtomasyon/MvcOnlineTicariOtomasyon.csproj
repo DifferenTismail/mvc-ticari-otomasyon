@@ -292,6 +292,7 @@
     <Content Include="Views\Departman\Index.cshtml" />
     <Content Include="Views\Departman\DepartmanEkle.cshtml" />
     <Content Include="Views\Departman\DepartmanGetir.cshtml" />
+    <Content Include="Views\Departman\DepartmanDetay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

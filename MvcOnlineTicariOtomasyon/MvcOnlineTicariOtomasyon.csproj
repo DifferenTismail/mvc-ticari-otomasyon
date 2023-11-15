@@ -298,6 +298,7 @@
     <Content Include="Views\Cari\Index.cshtml" />
     <Content Include="Views\Cari\YeniCari.cshtml" />
     <Content Include="Views\Cari\CariGetir.cshtml" />
+    <Content Include="Views\Cari\MusteriSatis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

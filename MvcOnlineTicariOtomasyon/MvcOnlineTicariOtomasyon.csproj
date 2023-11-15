@@ -290,6 +290,7 @@
     <Content Include="Views\Urun\YeniUrun.cshtml" />
     <Content Include="Views\Urun\UrunGetir.cshtml" />
     <Content Include="Views\Departman\Index.cshtml" />
+    <Content Include="Views\Departman\DepartmanEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

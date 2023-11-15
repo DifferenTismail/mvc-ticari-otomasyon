@@ -29,34 +29,42 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return RedirectToAction("Index");
         }
         //departman silme kodları
-        public ActionResult DepartmanSil(int id) {
+        public ActionResult DepartmanSil(int id)
+        {
             var dep = c.Departmans.Find(id);
             dep.Durum = false;
             c.SaveChanges();
             return RedirectToAction("Index");
         }
         //departman sayfasına veri tabanındaki verileri yazdırmaya yarar
-        public ActionResult DepartmanGetir (int id) {
+        public ActionResult DepartmanGetir(int id)
+        {
             var dpt = c.Departmans.Find(id);
             return View("DepartmanGetir", dpt);
         }
         //Departman güncelleme kodları
-        public ActionResult DepartmanGuncelle(Departman p) {
+        public ActionResult DepartmanGuncelle(Departman p)
+        {
             var dept = c.Departmans.Find(p.DepartmanID);
             dept.DepartmanAd = p.DepartmanAd;
             c.SaveChanges();
             return RedirectToAction("Index");
         }
         //departmanla ilgili olan detayları ekrana yazdıran kodlar
-        public ActionResult DepartmanDetay(int id) {
+        public ActionResult DepartmanDetay(int id)
+        {
             var degerler = c.Personels.Where(x => x.Departmanid == id).ToList();
-            var dpt = c.Departmans.Where(x => x.DepartmanID==id).Select(y => y.DepartmanAd).FirstOrDefault();
+            var dpt = c.Departmans.Where(x => x.DepartmanID == id).Select(y => y.DepartmanAd).FirstOrDefault();
             ViewBag.d = dpt;
             return View(degerler);
         }
         //departmandaki personelin satışlarını ekrana yazdırtan kodlar
-        public ActionResult DepartmanPersonelSatis (int id) {
-            return View();
+        public ActionResult DepartmanPersonelSatis(int id)
+        {
+            var degerler = c.SatisHarekets.Where(x => x.PersonelID == id).ToList();
+            var per = c.Personels.Where(x => x.PersonelID == id).Select(y => y.PersonelAd + " " + y.PersonelSoyad).FirstOrDefault();
+            ViewBag.dpers = per;
+            return View(degerler);
         }
     }
 }

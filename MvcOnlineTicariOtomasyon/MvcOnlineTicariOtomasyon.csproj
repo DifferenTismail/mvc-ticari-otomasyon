@@ -131,6 +131,7 @@
     <Compile Include="Controllers\DepartmanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -299,6 +300,7 @@
     <Content Include="Views\Cari\YeniCari.cshtml" />
     <Content Include="Views\Cari\CariGetir.cshtml" />
     <Content Include="Views\Cari\MusteriSatis.cshtml" />
+    <Content Include="Views\Personel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

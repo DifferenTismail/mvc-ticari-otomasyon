@@ -13,7 +13,7 @@ namespace MvcOnlineTicariOtomasyonControllers
         public ActionResult Index()
         {
             var degerler = c.Personels.ToList();
-            return View();
+            return View(degerler);
         }
     }
 }

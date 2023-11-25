@@ -14,15 +14,15 @@
         <th>Güncelle</th>
         <th>Satışlar</th>
     </tr>
-    @foreach (var k in Model)
+    @foreach (var p in Model)
     {
         <tr>
-            <td>@k.PersonelID</td>
-            <td>@k.PersonelAd</td>
-            <td>@k.PersonelSoyad</td>
-            <td>@k.Departman.DepartmanAd</td>
-            <td><a href="~/Departman/DepartmanGetir/@k.PersonelID" class="btn btn-warning">Güncelle</a></td>
-            <td><a href="~/Departman/DepartmanDetay/@k.PersonelID" class="btn btn-default" style="background-color:lightcoral;color:white;">Detaylar</a></td>
+            <td>@p.PersonelID</td>
+            <td>@p.PersonelAd</td>
+            <td>@p.PersonelSoyad</td>
+            <td>@p.Departman.DepartmanAd</td>
+            <td><a href="~/Departman/DepartmanGetir/@p.PersonelID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="~/Departman/DepartmanDetay/@p.PersonelID" class="btn btn-default" style="background-color:lightcoral;color:white;">Detaylar</a></td>
         </tr>
     }
 </table>

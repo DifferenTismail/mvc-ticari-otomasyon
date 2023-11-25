@@ -14,6 +14,8 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
+        [Required(ErrorMessage = "Bu Alanı Boş Geçemezsiniz !")]
+
         public string KategoriAd { get; set; }
         public ICollection<Urun> Uruns { get; set; }
     }

@@ -23,9 +23,13 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         [HttpPost]
         //butona basıldığında bura çalışıcak
         public ActionResult KategoriEkle(Kategori k) {
-            c.Kategoris.Add(k);
-            c.SaveChanges();
-            return RedirectToAction("Index");   
+            if (ModelState.IsValid)
+            {
+                c.Kategoris.Add(k);
+                c.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
         //veri tabanından kategori silmek için gereken kodlar
         public ActionResult KategoriSil(int id) {

@@ -8,7 +8,8 @@
 <br />
 <form class="form-group" method="post">
     @Html.LabelFor(x => x.KategoriAd)
-    @Html.TextBoxFor(x => x.KategoriID, new {@class = "form-control"})
+    @Html.TextBoxFor(x => x.KategoriAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.KategoriAd, "", new { @style = "color:red" })
     <br />
-    <button type="submit" class="btn btn-info">Kaydet</button>
+    <button class="btn btn-info">Kaydet</button>
 </form>

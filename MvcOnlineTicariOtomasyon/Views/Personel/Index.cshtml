@@ -20,10 +20,11 @@
             <td>@p.PersonelID</td>
             <td>@p.PersonelAd</td>
             <td>@p.PersonelSoyad</td>
+            <td>@p.PersonelGorsel</td>
             <td>@p.Departman.DepartmanAd</td>
-            <td><a href="~/Departman/DepartmanGetir/@p.PersonelID" class="btn btn-warning">Güncelle</a></td>
-            <td><a href="~/Departman/DepartmanDetay/@p.PersonelID" class="btn btn-default" style="background-color:lightcoral;color:white;">Detaylar</a></td>
+            <td><a href="~/Personel/PersonelGetir/@p.PersonelID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="~/Departman/DepartmanPersonelSatis/@p.PersonelID" class="btn btn-default" style="background-color:lightcoral;color:white;">Detaylar</a></td>
         </tr>
     }
 </table>
-<a href="~/Departman/DepartmanEkle" class="btn btn-info">Personel Ekle</a>
+<a href="~/Personel/PersonelEkle" class="btn btn-info">Personel Ekle</a>

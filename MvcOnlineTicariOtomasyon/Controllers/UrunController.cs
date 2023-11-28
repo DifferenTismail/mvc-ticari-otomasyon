@@ -62,5 +62,10 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return RedirectToAction("Index");
 
         }
+        //pdf excel sayfasına verileri yazdırır
+        public ActionResult UrunListesi() { 
+            var degerler = c.Uruns.ToList();
+            return View(degerler);
+        }
     }
 }

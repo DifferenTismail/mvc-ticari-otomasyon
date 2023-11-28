@@ -86,6 +86,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        //satış detay sayfasında gerekli olan verileri getirir
         public ActionResult SatisDetay(int id) {
             var degerler = c.SatisHarekets.Where(x => x.SatisID == id).ToList();
             return View(degerler);

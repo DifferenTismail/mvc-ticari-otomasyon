@@ -1,5 +1,3 @@
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.AssemblyReference.cache
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CoreCompileInputs.cache
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\MvcOnlineTicariOtomasyon.dll.config
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\MvcOnlineTicariOtomasyon.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\MvcOnlineTicariOtomasyon.pdb
@@ -78,6 +76,8 @@ C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.W
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Newtonsoft.Json.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Antlr3.Runtime.pdb
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.AssemblyReference.cache
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CoreCompileInputs.cache
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CopyComplete
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.pdb

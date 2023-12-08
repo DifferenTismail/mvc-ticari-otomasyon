@@ -55,11 +55,15 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             ViewBag.d14 = deger14;
 
             DateTime bugun = DateTime.Today;
-            var deger15 = c.SatisHarekets.Count(x => x.Tarih == bugun).ToString();
-            ViewBag.d15 = deger15;
+            var bugunkuSatislar = c.SatisHarekets.Where(x => x.Tarih == bugun);
 
-            var deger16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
-            ViewBag.d16 = deger16;
+            // Bugünkü satışların sayısını kontrol et
+            int satisAdeti = bugunkuSatislar.Count();
+            ViewBag.d15 = satisAdeti.ToString();
+
+            // Eğer bugün satış yapılmışsa ToplamTutar'ı topla, aksi halde 0 olarak ata
+            decimal bugunkuToplamTutar = satisAdeti > 0 ? bugunkuSatislar.Sum(y => y.ToplamTutar) : 0;
+            ViewBag.d16 = bugunkuToplamTutar.ToString();
             return View();
         }
     }

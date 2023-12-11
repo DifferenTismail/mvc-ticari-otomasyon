@@ -24,7 +24,10 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var deger4 = c.Kategoris.Count().ToString();
             ViewBag.d4 = deger4;
 
-            var deger5 = c.Uruns.Sum(x => x.Stok).ToString();
+            var deger5 = "0"; // Varsayılan değer
+            if (c.Uruns != null && c.Uruns.Any()){
+                deger5 = c.Uruns.Sum(x => x.Stok).ToString() ?? "0";
+            }
             ViewBag.d5 = deger5;
 
             var deger6 = (from x in c.Uruns select x.Marka).Distinct().Count().ToString();

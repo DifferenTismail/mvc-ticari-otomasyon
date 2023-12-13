@@ -1,0 +1,182 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<Yapilacak>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MvcOnlineTicariOtomasyon</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="~/AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <!--<div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+        </div>-->
+
+          
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>@ViewBag.d1</h3>
+                                    <p>Toplam Cari Sayısı</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-bag"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3>@ViewBag.d2</h3>
+
+                                    <p>Toplam Ürün Sayısı</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-stats-bars"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3>@ViewBag.d3</h3>
+
+                                    <p>Kategori Sayısı</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-person-add"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <h3>@ViewBag.d4</h3>
+
+                                    <p>Şehir Sayısı</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                    </div>
+                    <!-- /.row -->
+                    <!-- Main row -->
+                    <div class="row">
+                        <!-- Left col -->
+                        <section class="col-lg-7 connectedSortable">
+                            <!-- Custom tabs (Charts with tabs)-->
+                            <!-- TO DO List -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        <i class="ion ion-clipboard mr-1"></i>
+                                        Yapılacaklar Listesi
+                                    </h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <ul class="todo-list" data-widget="todo-list">
+                                        @foreach(var x in Model) {
+                                        <li>   
+                                            <span class="handle">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="icheck-primary d-inline ml-2">
+                                                <input type="checkbox" value="" name="todo1" id="todoCheck1">
+                                                <label for="todoCheck1"></label>
+                                            </div>
+                                            <span class="text">@x.Baslik</span>
+                                            <small class="badge badge-danger"><i class="far fa-clock"></i></small>
+                                            <div class="tools">
+                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-trash-o"></i>
+                                            </div>
+                                        </li>
+                                        }
+                                    </ul>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer clearfix">
+                                    <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Yeni Yapılacak Notu Ekle</button>
+                                </div>
+                            </div>
+                            <!-- /.card -->
+                        </section>
+                        <!-- /.Left col -->
+                        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+
+                        <!-- right col -->
+                    </div>
+                    <!-- /.row (main row) -->
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <!-- /.control-sidebar -->
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="~/AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/AdminLTE-3.2.0/AdminLTE-3.2.0/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>$.widget.bridge('uibutton', $.ui.button)</script>   
+    <!-- AdminLTE App -->
+    <script src="~/AdminLTE-3.2.0/AdminLTE-3.2.0/dist/js/adminlte.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="~/AdminLTE-3.2.0/AdminLTE-3.2.0/dist/js/pages/dashboard.js"></script>
+</body>
+</html>
+
+

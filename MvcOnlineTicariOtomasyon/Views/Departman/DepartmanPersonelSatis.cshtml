@@ -12,7 +12,6 @@
 </ol>
 <table class="table table-condensed">
     <tr>
-        <th>Satış ID</th>
         <th>Ürün</th>
         <th>Cari</th>
         <th>Fiyat</th>
@@ -23,12 +22,11 @@
     </tr>
     @foreach (var x in Model) {
     <tr>
-         <td>@x.SatisID</td>
          <td>@x.Urun.UrunAd</td>
          <td>@x.Cariler.CardiAd @x.Cariler.CariSoyad</td>
-         <td>@x.Fiyat</td>
+         <td>@x.Fiyat ₺</td>
          <td>@x.Adet</td>
-         <td>@x.ToplamTutar</td>
+         <td>@x.ToplamTutar ₺</td>
          <td>@x.Tarih</td>
          <td><a href="#" class="btn btn-default" style="background-color:dodgerblue;color:white;">Yazdır</a></td>
     </tr>

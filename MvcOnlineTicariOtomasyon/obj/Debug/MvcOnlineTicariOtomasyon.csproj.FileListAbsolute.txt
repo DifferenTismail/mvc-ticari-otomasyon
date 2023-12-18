@@ -81,3 +81,7 @@ C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\Mv
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CopyComplete
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.pdb
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.dll
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.dll
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.xml
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.xml

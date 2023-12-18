@@ -49,5 +49,21 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             }
 
         }
+        [HttpGet]
+        public ActionResult AdminLogin() { 
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AdminLogin(Admin p) {
+            var bilgiler = c.Admins.FirstOrDefault(x => x.KullaniciAd == p.KullaniciAd && x.Sifre == p.Sifre);
+            if (bilgiler != null) {
+                FormsAuthentication.SetAuthCookie(bilgiler.KullaniciAd, false);
+                Session["KullaniciAd"] = bilgiler.KullaniciAd.ToString();
+                return RedirectToAction("Index", "Kategori");
+            }
+            else {
+                return RedirectToAction("Index", "Login");
+            }
+        }
     }
 }

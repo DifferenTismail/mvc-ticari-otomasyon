@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -28,6 +30,13 @@ namespace MvcOnlineTicariOtomasyonControllers
         //personel ekleme kodları
         [HttpPost]
         public ActionResult PersonelEkle(Personel p) {
+            if (Request.Files.Count > 0) {
+                string DosyaAdi = Path.GetFileName(Request.Files[0].FileName);//hafızadaki dosya adını alıyor
+                string Uzanti = Path.GetExtension(Request.Files[0].FileName);//uzantısını alıyor
+                string Yol = "~/images/PersonelGorsel/" + DosyaAdi + Uzanti;
+                Request.Files[0].SaveAs(Server.MapPath(Yol));
+                p.PersonelGorsel = "/images/PersonelGorsel/" + DosyaAdi + Uzanti;
+            }
             c.Personels.Add(p);
             c.SaveChanges();
             return RedirectToAction("Index");
@@ -44,6 +53,14 @@ namespace MvcOnlineTicariOtomasyonControllers
         }
         //personel güncelleme kodları
         public ActionResult PersonelGuncelle(Personel p) {
+            if (Request.Files.Count > 0)
+            {
+                string DosyaAdi = Path.GetFileName(Request.Files[0].FileName);//hafızadaki dosya adını alıyor
+                string Uzanti = Path.GetExtension(Request.Files[0].FileName);//uzantısını alıyor
+                string Yol = "~/images/PersonelGorsel/" + DosyaAdi + Uzanti;
+                Request.Files[0].SaveAs(Server.MapPath(Yol));
+                p.PersonelGorsel = "/images/PersonelGorsel/" + DosyaAdi + Uzanti;
+            }
             var prsn = c.Personels.Find(p.PersonelID);
             prsn.PersonelAd = p.PersonelAd;
             prsn.PersonelSoyad = p.PersonelSoyad;

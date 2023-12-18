@@ -6,6 +6,7 @@
 <br />
 <h2>Yeni Personel Sayfası</h2>
 <br />
+@using(Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" })) { 
 <form class="form-group" method="post">
     @Html.LabelFor(x => x.PersonelAd)
     @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
@@ -14,7 +15,8 @@
     @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
     <br />
     @Html.LabelFor(x => x.PersonelGorsel)
-    @Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })
+    @*@Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })*@
+    <input  type="file" name="PersonelGorsel"/>
     <br />
     @Html.LabelFor(x => x.Departman)
     @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control" })*@
@@ -22,5 +24,5 @@
     <br />
     <button class="btn btn-primary">Kaydet</button>
 </form>
-
+}
 

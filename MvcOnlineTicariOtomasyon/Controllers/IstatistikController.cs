@@ -99,5 +99,16 @@ namespace MvcOnlineTicariOtomasyon.Controllers
                         };
             return PartialView(sorgu3.ToList());
         }
+        public PartialViewResult Partial3() {
+            var sorgu4 = from x in c.Kategoris
+                         group x by x.KategoriAd into g
+                         select new SinifGrup4
+                         {
+                             Kategori = g.Key,
+                             Sayi = g.Count()
+                         };
+            return PartialView(sorgu4.ToList());
+        }
     }
+    
 }

@@ -1,12 +1,50 @@
 ﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
-@model List<Kategori> 
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Kategori>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<style>
+    /* Sayfalama bağlantıları için temel stil */
+    .pagination {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+        .pagination li {
+            margin-right: 5px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        /* Aktif sayfa bağlantısı */
+        .pagination .active a {
+            background-color: #0056b3;
+        }
+
+        /* Hover etkileşimi */
+        .pagination a:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+</style>
+<br />
 <table class="table table-bordered" style="margin-top:20px;">
+    @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+
+
+
+
     <tr>
-        <th>ID</th>
         <th>Kategori Adı</th>
         <th>Sil</th>
         <th>Güncelle</th>
@@ -15,14 +53,11 @@
     {
         <tr>
             <td>
-                @k.KategoriID
-            </td>
-            <td>
                 @k.KategoriAd
             </td>
             <td><a href="~/Kategori/KategoriSil/@k.KategoriID" class="btn btn-danger">Sil</a></td>
             <td><a href="~/Kategori/KategoriGetir/@k.KategoriID" class="btn btn-success">Güncelle</a></td>
-            
+
         </tr>
     }
 </table>

@@ -4,15 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
+using PagedList;
+using PagedList.Mvc;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
     public class KategoriController : Controller
     {
         // GET: Kategori
         Context c = new Context();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa = 1)
         {
-            var degerler =c.Kategoris.ToList();
+            var degerler =c.Kategoris.ToList().ToPagedList(sayfa, 4);
             return View(degerler);
         }
         [HttpGet]
@@ -50,5 +52,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
     }
 }

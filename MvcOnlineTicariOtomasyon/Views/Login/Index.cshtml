@@ -112,12 +112,13 @@
                     <h3>Personel Girişi</h3>
                     <div class="clear"></div>
                     <div class="login-agileits-top">
-                        <form action="#" method="post">
-                            <input type="text" class="name" name="KullaniciAdi" Placeholder="Kullanıcı Adı  " required="" />
+                        @using (Html.BeginForm("AdminLogin", "Login", FormMethod.Post))
+                        {
+                            <input type="text" class="name" name="KullaniciAd" Placeholder="Kullanıcı Adı" required="" />
                             <input type="password" class="password" name="Sifre" Placeholder="Şifre" required="" />
                             <input type="submit" value="Giriş Yap">
-                        </form>
-                    </div>
+                        }
+                        </div>
                 </div>
             </div>
 

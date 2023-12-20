@@ -85,3 +85,5 @@ C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedLis
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.xml
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.Migrations.denemekargo1.resources
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.GenerateResource.cache

@@ -72,12 +72,28 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = c.Uruns.ToList();
             return View(degerler);
         }
-        public  ActionResult SatisYap() { 
-            
+        [HttpGet]
+        public  ActionResult SatisYap(int id) {
+            List<SelectListItem> deger3 = (from x in c.Personels.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.PersonelAd + " " + x.PersonelSoyad,
+                                               Value = x.PersonelID.ToString()
+                                           }).ToList();
+            ViewBag.dgr1 = deger3;
+            var deger2 = c.Uruns.Find(id);
+            ViewBag.dgr2 = deger2.UrunID;
+            ViewBag.dgr3 = deger2.SatisFiyati;
             return View();
         }
-        public ActionResult SatisYap(SatisHareket p) { 
-            return View(p);
+        [HttpPost]
+        public ActionResult SatisYap(SatisHareket p) {
+
+            p.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
+            c.SatisHarekets.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index", "Satis");
         }
+
     }
 }

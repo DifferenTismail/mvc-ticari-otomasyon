@@ -72,5 +72,12 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = c.Uruns.ToList();
             return View(degerler);
         }
+        public  ActionResult SatisYap() { 
+            
+            return View();
+        }
+        public ActionResult SatisYap(SatisHareket p) { 
+            return View(p);
+        }
     }
 }

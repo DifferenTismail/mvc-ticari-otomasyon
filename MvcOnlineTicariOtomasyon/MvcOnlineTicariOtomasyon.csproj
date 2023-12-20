@@ -2448,15 +2448,24 @@
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="dist\css\adminlte.min.css" />
+    <Content Include="dist\css\all.min.css" />
     <Content Include="dist\css\bootstrap.css" />
     <Content Include="dist\css\clndr.css" />
+    <Content Include="dist\css\font-awesome.css" />
     <Content Include="dist\css\jqvmap.css" />
     <Content Include="dist\css\nav.css" />
+    <Content Include="dist\css\popup-box.css" />
     <Content Include="dist\css\style.css" />
+    <Content Include="dist\css\style2.css" />
+    <Content Include="dist\js\adminlte.min.js" />
+    <Content Include="dist\js\bootstrap.bundle.min.js" />
     <Content Include="dist\js\Chart1.js" />
     <Content Include="dist\js\clndr.js" />
     <Content Include="dist\js\easyResponsiveTabs.js" />
+    <Content Include="dist\js\jquery-2.1.4.min.js" />
     <Content Include="dist\js\jquery.easydropdown.js" />
+    <Content Include="dist\js\jquery.magnific-popup.js" />
     <Content Include="dist\js\jquery.min.js" />
     <Content Include="dist\js\jquery.nicescroll.js" />
     <Content Include="dist\js\jquery.vmap.js" />
@@ -2485,10 +2494,13 @@
     <Content Include="dist\thumber\js\bootstrap.min.js" />
     <Content Include="dist\thumber\js\jquery-3.3.1.min.js" />
     <Content Include="dist\thumber\js\jquery.fancybox.min.js" />
+    <Content Include="dist\weblogin\css\style.css" />
+    <Content Include="dist\weblogin\images\bg.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\Arcelik-buzdolabi.png" />
+    <Content Include="images\bg.jpg" />
     <Content Include="images\buzdolabi-beko_1.png" />
     <Content Include="images\camasir-makinesi.jpg" />
     <Content Include="images\Laptop.png" />
@@ -3377,6 +3389,7 @@
     <Content Include="Views\CariPanel\Siparislerim.cshtml" />
     <Content Include="Views\Istatistik\Partial3.cshtml" />
     <Content Include="Views\Alertler\Index.cshtml" />
+    <Content Include="Views\Urun\SatisYap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

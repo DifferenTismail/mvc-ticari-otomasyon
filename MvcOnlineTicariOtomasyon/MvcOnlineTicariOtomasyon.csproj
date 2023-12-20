@@ -151,6 +151,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312202154490_denemekargo1.cs" />
+    <Compile Include="Migrations\202312202154490_denemekargo1.designer.cs">
+      <DependentUpon>202312202154490_denemekargo1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
     <Compile Include="Models\Siniflar\Cariler.cs" />
@@ -161,6 +165,8 @@
     <Compile Include="Models\Siniflar\FaturaKalem.cs" />
     <Compile Include="Models\Siniflar\Faturalar.cs" />
     <Compile Include="Models\Siniflar\Gider.cs" />
+    <Compile Include="Models\Siniflar\KargoDetay.cs" />
+    <Compile Include="Models\Siniflar\KargoTakip.cs" />
     <Compile Include="Models\Siniflar\Kategori.cs" />
     <Compile Include="Models\Siniflar\Personel.cs" />
     <Compile Include="Models\Siniflar\SatisHareket.cs" />
@@ -2451,19 +2457,29 @@
     <Content Include="dist\css\adminlte.min.css" />
     <Content Include="dist\css\all.min.css" />
     <Content Include="dist\css\bootstrap.css" />
+    <Content Include="dist\css\bootstrap.min.css" />
     <Content Include="dist\css\clndr.css" />
+    <Content Include="dist\css\daterangepicker.css" />
     <Content Include="dist\css\font-awesome.css" />
+    <Content Include="dist\css\icheck-bootstrap.min.css" />
     <Content Include="dist\css\jqvmap.css" />
+    <Content Include="dist\css\jqvmap.min.css" />
     <Content Include="dist\css\nav.css" />
+    <Content Include="dist\css\OverlayScrollbars.min.css" />
     <Content Include="dist\css\popup-box.css" />
+    <Content Include="dist\css\simple-sidebar.css" />
     <Content Include="dist\css\style.css" />
-    <Content Include="dist\css\style2.css" />
+    <Content Include="dist\css\styles.css" />
+    <Content Include="dist\css\summernote-bs4.min.css" />
+    <Content Include="dist\css\tempusdominus-bootstrap-4.min.css" />
     <Content Include="dist\js\adminlte.min.js" />
     <Content Include="dist\js\bootstrap.bundle.min.js" />
     <Content Include="dist\js\Chart1.js" />
     <Content Include="dist\js\clndr.js" />
+    <Content Include="dist\js\dashboard.js" />
     <Content Include="dist\js\easyResponsiveTabs.js" />
     <Content Include="dist\js\jquery-2.1.4.min.js" />
+    <Content Include="dist\js\jquery-ui.min.js" />
     <Content Include="dist\js\jquery.easydropdown.js" />
     <Content Include="dist\js\jquery.magnific-popup.js" />
     <Content Include="dist\js\jquery.min.js" />
@@ -2473,6 +2489,7 @@
     <Content Include="dist\js\jquery.vmap.world.js" />
     <Content Include="dist\js\main.js" />
     <Content Include="dist\js\moment-2.2.1.js" />
+    <Content Include="dist\js\scripts.js" />
     <Content Include="dist\js\site.js" />
     <Content Include="dist\js\underscore-min.js" />
     <Content Include="dist\thumber\css\aos.css" />
@@ -3420,6 +3437,11 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202312202154490_denemekargo1.resx">
+      <DependentUpon>202312202154490_denemekargo1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

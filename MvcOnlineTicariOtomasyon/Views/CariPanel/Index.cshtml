@@ -15,16 +15,28 @@
             </td>
         </tr>
         <tr>
-            <td>@Html.TextBoxFor(x => x.CardiAd, new { @class = "form-control" })</td>
+            <td>
+                @Html.LabelFor(x => x.CardiAd)
+                @Html.TextBoxFor(x => x.CardiAd, new { @class = "form-control" })
+            </td>
         </tr>
         <tr>
-            <td>@Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })</td>
+            <td>
+                @Html.LabelFor(x => x.CariSoyad)
+                @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
+            </td>
         </tr>
         <tr>
-            <td>@Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })</td>
+            <td>
+                @Html.LabelFor(x => x.CariSehir)
+                @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
+            </td>
         </tr>
         <tr>
-            <td>@Html.TextBoxFor(x => x.CariSifre, new { @class = "form-control" })</td>
+            <td>
+                @Html.LabelFor(x => x.CariSifre)
+                @Html.PasswordFor(x => x.CariSifre, new { @class = "form-control" })
+            </td>
         </tr>
     </table>
     <button class="btn btn-warning">Bilgilerimi Güncelle</button>

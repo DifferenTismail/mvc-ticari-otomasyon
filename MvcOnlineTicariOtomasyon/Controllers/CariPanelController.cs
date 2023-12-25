@@ -26,5 +26,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = c.SatisHarekets.Where(x => x.CariID == id).ToList();
             return View(degerler);
         }
+        
     }
 }

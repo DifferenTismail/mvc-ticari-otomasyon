@@ -1,0 +1,497 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<Mesajlar>
+@{
+    ViewBag.Title = "GidenMesajlar";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/dist/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/c9a019f83a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link href="~/dist/css/icheck-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/dist/css/font-awesome.css" rel="stylesheet" />
+
+    <link href="~/dist/css/adminlte.min.css" rel="stylesheet" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+
+    <section class="content-header">
+
+        <div class="container-fluid">
+
+            <div class="row mb-2">
+
+                <div class="col-sm-6">
+
+                    <h1>Mesaj Kutusu</h1>
+
+                </div>
+
+            </div>
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+    <!-- Main content -->
+
+    <section class="content">
+
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <a href="~/CariPanel/YeniMesaj" class="btn btn-primary btn-block mb-3">Yeni Mesaj Oluştur</a>
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h3 class="card-title">Klasörler</h3>
+
+                        <div class="card-tools">
+
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+
+                                <i class="fas fa-minus"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-body p-0">
+
+                        <ul class="nav nav-pills flex-column">
+
+                            <li class="nav-item active">
+
+                                <a href="~/CariPanel/GelenMesajlar" class="nav-link">
+
+                                    <i class="fas fa-inbox"></i> Gelen Kutusu
+
+                                    <span class="badge bg-primary float-right">@ViewBag.d1</span>
+
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a href="~/CariPanel/GidenMesajlar" class="nav-link">
+
+                                    <i class="far fa-envelope"></i> Giden Kutusu
+                                    <span class="badge bg-danger float-right">@ViewBag.d2</span>
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+
+                                    <i class="far fa-file-alt"></i> Taslaklar
+                                    <span class="badge bg-fuchsia float-right">0</span>
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+
+                                    <i class="fas fa-filter"></i> Gereksizler
+
+                                    <span class="badge bg-warning float-right">2</span>
+
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+
+                                    <i class="far fa-trash-alt"></i> Çöp Kutusu
+                                    <span class="badge bg-gradient-olive float-right">1</span>
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- /.card-body -->
+
+                </div>
+
+                <!-- /.card -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h3 class="card-title">Filtreler</h3>
+
+                        <div class="card-tools">
+
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+
+                                <i class="fas fa-minus"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-body p-0">
+
+                        <ul class="nav nav-pills flex-column">
+
+                            <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+
+                                    <i class="far fa-circle text-danger"></i>
+
+                                    Önemliler
+
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+
+                                    <i class="far fa-circle text-warning"></i> Promosyonlar
+
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+
+                                    <i class="far fa-circle text-primary"></i>
+
+                                    Sosyal Medya Mesajları
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- /.card-body -->
+
+                </div>
+
+                <!-- /.card -->
+
+            </div>
+
+            <!-- /.col -->
+
+            <div class="col-md-9">
+
+                <div class="card card-primary card-outline">
+
+                    <div class="card-header">
+
+                        <h3 class="card-title">Giden Kutusu</h3>
+
+                        <div class="card-tools">
+
+                            <div class="input-group input-group-sm">
+
+                                <input type="text" class="form-control" placeholder="Mail Ara">
+
+                                <div class="input-group-append">
+
+                                    <div class="btn btn-primary">
+
+                                        <i class="fas fa-search"></i>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- /.card-tools -->
+
+                    </div>
+
+                    <!-- /.card-header -->
+
+                    <div class="card-body p-0">
+
+                        <div class="mailbox-controls">
+
+                            <!-- Check all button -->
+
+                            <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+
+                                <i class="far fa-square"></i>
+
+                            </button>
+
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+
+                            </div>
+
+                            <!-- /.btn-group -->
+
+                            <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+
+                            <div class="float-right">
+
+                                1-50/200
+
+                                <div class="btn-group">
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
+
+                                </div>
+
+                                <!-- /.btn-group -->
+
+                            </div>
+
+                            <!-- /.float-right -->
+
+                        </div>
+
+                        <div class="table-responsive mailbox-messages">
+
+                            <table class="table table-hover table-striped">
+
+                                <tbody>
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>
+
+                                                <div class="icheck-primary">
+
+                                                    <input type="checkbox" value="" id="check1">
+
+                                                    <label for="check1"></label>
+
+                                                </div>
+
+                                            </td>
+
+                                            <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
+
+                                            <td class="mailbox-name"><a href="read-mail.html">@x.Alici</a></td>
+
+                                            <td class="mailbox-subject">
+
+                                                <b>@x.Konu</b> @x.Icerik.Substring(0, 40).ToString()...
+
+                                            </td>
+
+                                            <td class="mailbox-attachment"></td>
+
+                                            <td class="mailbox-date">@x.Tarih.ToShortDateString()</td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+
+                            </table>
+
+                            <!-- /.table -->
+
+                        </div>
+
+                        <!-- /.mail-box-messages -->
+
+                    </div>
+
+                    <!-- /.card-body -->
+
+                    <div class="card-footer p-0">
+
+                        <div class="mailbox-controls">
+
+                            <!-- Check all button -->
+
+                            <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+
+                                <i class="far fa-square"></i>
+
+                            </button>
+
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+
+                            </div>
+
+                            <!-- /.btn-group -->
+
+                            <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+
+                            <div class="float-right">
+
+                                1-50/200
+
+                                <div class="btn-group">
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
+
+                                </div>
+
+                                <!-- /.btn-group -->
+
+                            </div>
+
+                            <!-- /.float-right -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- /.card -->
+
+            </div>
+
+            <!-- /.col -->
+
+        </div>
+
+        <!-- /.row -->
+
+    </section>
+
+
+
+    <!-- /.content-wrapper -->
+
+
+    <script src="~/dist/js/jquery.min.js"></script>
+
+
+    <script src="~/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/dist/js/adminlte.min.js"></script>
+
+
+
+    <script>
+$(function () {
+
+    //Enable check and uncheck all functionality
+
+    $('.checkbox-toggle').click(function () {
+
+      var clicks = $(this).data('clicks')
+
+      if (clicks) {
+
+        //Uncheck all checkboxes
+
+        $('.mailbox-messages input[type=\'checkbox\']').prop('checked', false)
+
+        $('.checkbox-toggle .far.fa-check-square').removeClass('fa-check-square').addClass('fa-square')
+
+      } else {
+
+        //Check all checkboxes
+
+        $('.mailbox-messages input[type=\'checkbox\']').prop('checked', true)
+
+        $('.checkbox-toggle .far.fa-square').removeClass('fa-square').addClass('fa-check-square')
+
+      }
+
+      $(this).data('clicks', !clicks)
+
+    })
+
+
+
+    //Handle starring for glyphicon and font awesome
+
+    $('.mailbox-star').click(function (e) {
+
+      e.preventDefault()
+
+      //detect type
+
+      var $this = $(this).find('a > i')
+
+      var glyph = $this.hasClass('glyphicon')
+
+      var fa    = $this.hasClass('fa')
+
+
+
+      //Switch states
+
+      if (glyph) {
+
+        $this.toggleClass('glyphicon-star')
+
+        $this.toggleClass('glyphicon-star-empty')
+
+      }
+
+
+
+      if (fa) {
+
+        $this.toggleClass('fa-star')
+
+        $this.toggleClass('fa-star-o')
+
+      }
+
+    })
+
+  })</script>
+
+</body>
+
+
+

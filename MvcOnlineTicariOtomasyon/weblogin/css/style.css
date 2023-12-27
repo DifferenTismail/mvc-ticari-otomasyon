@@ -113,12 +113,6 @@ a:focus, a:hover {
 	text-decoration: none;
 	outline: none;
 }
-body {
-	padding: 3em 0;
-	background: url(../weblogin/images/arkaplan.jpg);
-	background-attachment: fixed;
-	background-size: cover;
-}
 p{
 	font-family: 'Open Sans', sans-serif;
 }

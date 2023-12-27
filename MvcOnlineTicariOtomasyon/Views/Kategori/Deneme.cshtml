@@ -1,0 +1,58 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Class3
+
+@{
+    ViewBag.Title = "Deneme";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/dist/js/jquery.min.js"></script>
+<script>
+
+    $(function () {
+
+        $('#DrpKategori').change(function () {
+
+            var id = $('#DrpKategori').val();
+
+            $.ajax({
+
+                url: '/Kategori/UrunGetir',
+
+                data: { p: id },
+
+                type: "POST",
+
+                dataType: "Json",
+
+                success: function (data) {
+
+                    console.log(data);
+
+                    $('#DrpUrun').empty();
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        $('#DrpUrun').append("<option value='" + data[i].Value + "'>" + data[i].Text + "</Option>");
+
+                    }
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
+<br />
+<div>
+    <h2>Kategoriler - Ürünler</h2>
+</div>
+<br />
+<div>
+    @Html.Label("Kategoriler")
+    @Html.DropDownList("DrpKategori", Model.Kategoriler, "---Kategori Seçiniz---", new {@class = "form-control"})
+    <br />
+    @Html.Label("Ürünler")
+    @Html.DropDownList("DrpUrun", Model.Urunler, "---Ürün Seçiniz---", new {@class ="form-control"})
+</div>

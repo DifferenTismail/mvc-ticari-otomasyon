@@ -33,9 +33,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Ayarlar</a><a class="dropdown-item" href="#">Hesabım</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="login.html">Çıkış Yap</a>
+                    <a class="dropdown-item" href="~/CariPanel/LogOut">Çıkış Yap</a>
                 </div>
             </li>
         </ul>
@@ -54,10 +52,13 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-flask"></i></div>
                             Ürünler
                         </a>
-                        <a class="nav-link" href="~/Departman/Index">
-                            <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
-                            Departmanlar
-                        </a>
+                        @if (User.IsInRole("A"))
+                        {
+                            <a class="nav-link" href="~/Departman/Index">
+                                <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
+                                Departmanlar
+                            </a>
+                        }
                         <a class="nav-link" href="~/Cari/Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                             Cariler
@@ -79,16 +80,10 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="~/Grafik/Index5">Pie Grafik</a>
-                                    <a class="nav-link" href="~/Grafik/Index6">Line Grafik</a>
-                                    <a class="nav-link" href="~/Grafik/Index7">Column Grafik</a></nav>
-                                </div>
-                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                    Hata Sayfaları
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                    <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="401.html">401 Page</a><a class="nav-link" href="404.html">404 Page</a><a class="nav-link" href="500.html">500 Page</a></nav>
+                                        <a class="nav-link" href="~/Grafik/Index5">Pie Grafik</a>
+                                        <a class="nav-link" href="~/Grafik/Index6">Line Grafik</a>
+                                        <a class="nav-link" href="~/Grafik/Index7">Column Grafik</a>
+                                    </nav>
                                 </div>
                             </nav>
                         </div>
@@ -100,6 +95,10 @@
                         <a class="nav-link" href="~/Fatura/Index/">
                             <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
                             Faturalar
+                        </a>
+                        <a class="nav-link" href="~/Fatura/Dinamik/">
+                            <div class="sb-nav-link-icon"><i class="fas fa-procedures"></i></div>
+                            Dinamik Faturalar
                         </a>
                         <a class="nav-link" href="tables.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-pie"></i></div>
@@ -129,12 +128,15 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-university"></i></div>
                             Ürün Detay
                         </a>
-                        <a class="nav-link" href="~/Istatistik/KolayTablolar">
-                            <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
-                            Hızlı Bakış
-                        </a>
+                        @if (User.IsInRole("A"))
+                        {
+                            <a class="nav-link" href="~/Istatistik/KolayTablolar">
+                                <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
+                                Hızlı Bakış
+                            </a>
+                        }
                         <a class="nav-link" href="~/Personel/PersonelListe/">
-                            <div class="sb-nav-link-icon"><i class="fas fa-car-battery"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-people-carry"></i></div>
                             Personeller Detay
                         </a>
                         <a class="nav-link" href="~/Yapilacak/Index/">

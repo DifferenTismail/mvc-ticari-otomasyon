@@ -21,7 +21,7 @@
         <tr>
             <td>@k.FaturaSeriNo @k.FaturaSiraNo</td>
             <td>@k.VergiDairesi</td>
-            <td>@k.Tarih</td>
+            <td>@k.Tarih.ToShortDateString()</td>
             <td>@k.Saat</td>
             <td>@k.Toplam ₺</td>
             <td><a href="~/Fatura/FaturaGetir/@k.FaturaID" class="btn btn-warning">Güncelle</a></td>

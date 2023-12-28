@@ -1,3 +1,7 @@
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.AssemblyReference.cache
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.Migrations.denemekargo1.resources
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.GenerateResource.cache
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CoreCompileInputs.cache
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\MvcOnlineTicariOtomasyon.dll.config
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\MvcOnlineTicariOtomasyon.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\MvcOnlineTicariOtomasyon.pdb
@@ -56,6 +60,8 @@ C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\EntityFr
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Microsoft.Web.Infrastructure.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Newtonsoft.Json.dll
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.dll
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.Helpers.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.Mvc.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.Optimization.dll
@@ -66,6 +72,8 @@ C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.W
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\WebGrease.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\EntityFramework.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\EntityFramework.SqlServer.xml
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.xml
+C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.Helpers.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.Mvc.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.Optimization.xml
@@ -73,17 +81,8 @@ C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.W
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.WebPages.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.WebPages.Deployment.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\System.Web.WebPages.Razor.xml
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Newtonsoft.Json.xml
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Antlr3.Runtime.pdb
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.AssemblyReference.cache
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CoreCompileInputs.cache
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.CopyComplete
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.dll
 C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.pdb
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.dll
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.dll
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.xml
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.xml
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.Migrations.denemekargo1.resources
-C:\cSharpDersleri\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.GenerateResource.cache

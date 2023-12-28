@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MvcOnlineTicariOtomasyon</title>
-
+    <script src="https://kit.fontawesome.com/c9a019f83a.js" crossorigin="anonymous"></script>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -60,29 +60,28 @@
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <ul class="todo-list" data-widget="todo-list">
-                                        @foreach (var x in Model) {
-                                        <li>   
-                                            <span class="handle">
-                                                <i class="fas fa-ellipsis-v"></i>
-                                                <i class="fas fa-ellipsis-v"></i>
-                                            </span>
-                                            <div class="icheck-primary d-inline ml-2">
-                                                <input type="checkbox" value="" name="todo1" id="@("todoCheck" + x.YapicalakID)">
-                                                <label for="@("todoCheck" + x.YapicalakID)"></label>
-                                            </div>
-                                            <span class="text">@x.Baslik</span>
-                                            <small class="badge badge-danger"><i class="far fa-clock"></i></small>
-                                            <div class="tools">
-                                                <i class="fas fa-edit"></i>
-                                                <i class="fas fa-trash-o"></i>
-                                            </div>
-                                        </li>
+                                        @foreach (var x in Model)
+                                        {
+                                            <li>
+                                                <span class="handle">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </span>
+                                                <div class="icheck-primary d-inline ml-2">
+                                                    <input type="checkbox" value="" name="todo1" id="@x.YapicalakID">
+                                                    <label for="@x.YapicalakID"></label>
+                                                </div>
+                                                <span class="text">@x.Baslik</span>
+                                                <div class="tools">
+                                                    <a class="btn  btn-sm btn-danger" href="~/Yapilacak/YapilacakSil/@x.YapicalakID" class=""><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </li>
                                         }
                                     </ul>
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer clearfix">
-                                    <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Yeni Yapılacak Notu Ekle</button>
+                                    <a href="~/Yapilacak/YapilacakEkle"> <button type="button" class="btn btn-primary float-right" href="~/Yapilacak/YapilacakEkle"><i class="fas fa-plus"></i>Yeni Yapılacak Notu Ekle</></button></a>
                                 </div>
                             </div>
                             <!-- /.card -->

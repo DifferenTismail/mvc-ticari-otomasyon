@@ -8,7 +8,7 @@
 <h2>Yeni Kategori Sayfası</h2>
 <br />
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.KategoriAd)
+    @Html.Label("Kategori Adı")
     @Html.TextBoxFor(x => x.KategoriAd, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.KategoriAd, "", new { @style = "color:red" })
     <br />

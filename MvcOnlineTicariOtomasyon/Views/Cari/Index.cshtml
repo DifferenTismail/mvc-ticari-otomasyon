@@ -9,8 +9,7 @@
 <br />
 <table class="table table-striped">
     <tr>
-        <th>Ad</th>
-        <th>Soyad</th>
+        <th>Ad Soyad</th>
         <th>Şehir</th>
         <th>Mail</th>
         <th>Sil</th>
@@ -19,8 +18,7 @@
     </tr>
     @foreach(var x in Model) { 
         <tr>
-            <td>@x.CardiAd</td>
-            <td>@x.CariSoyad</td>
+            <td>@x.CardiAd @x.CariSoyad</td>
             <td>@x.CariSehir</td>
             <td>@x.CariMail</td>
             <td><a href="~/Cari/CariSil/@x.CariID" class="btn btn-danger">Sil</a></td>

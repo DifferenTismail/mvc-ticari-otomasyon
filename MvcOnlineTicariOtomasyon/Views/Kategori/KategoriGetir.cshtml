@@ -4,12 +4,12 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <br />
-<h2>KategoriG Güncelleme</h2>
+<h2>Kategori Güncelleme</h2>
 <br />
 
 @using(Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post)) { 
     <div class="form-group">
-        @Html.LabelFor(x => x.KategoriAd)
+        @Html.Label("Kategori Adı")
         @Html.TextBoxFor(x => x.KategoriAd, new { @class = "form-control" })
         @Html.HiddenFor(x => x.KategoriID)
     </div>

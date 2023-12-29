@@ -7,16 +7,16 @@
 <h2>Yeni Müşteri Sayfası</h2>
 <br />
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.CardiAd)
+    @Html.Label("Müşteri Adı")
     @Html.TextBoxFor(x => x.CardiAd, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.CariSoyad)
+    @Html.Label("Müşteri Soyad")
     @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.CariSehir)
+    @Html.Label("Müşteri Şehir")
     @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.CariMail)
+    @Html.Label("Müşteri Mail")
     @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
     <br />
     <button class="btn btn-info">Kaydet</button>

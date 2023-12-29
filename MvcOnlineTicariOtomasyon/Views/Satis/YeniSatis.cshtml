@@ -8,22 +8,22 @@
 <h2>Yeni Satış Sayfası</h2>
 <br />
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.Urun)
+    @Html.Label("Ürün")
     @Html.DropDownListFor(x => x.UrunID, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
     <br />
     @Html.Label("Müşteri")
     @Html.DropDownListFor(x => x.CariID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Personel)
+    @Html.Label("Personel")
     @Html.DropDownListFor(x => x.PersonelID, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Adet)
+    @Html.Label("Adet")
     @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Fiyat)
+    @Html.Label("Fiyat")
     @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.ToplamTutar)
+    @Html.Label("Toplam Tutar")
     @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
     <br />
     <button class="btn btn-primary">Satış Yap</button>

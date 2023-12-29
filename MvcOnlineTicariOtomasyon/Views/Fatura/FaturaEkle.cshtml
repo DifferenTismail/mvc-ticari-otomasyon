@@ -8,25 +8,25 @@
 <h2>Yeni Fatura Sayfası</h2>
 <br />
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.FaturaSeriNo)
+    @Html.Label("Fatura Seri No")
     @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.FaturaSiraNo)
+    @Html.Label("Fatura Sıra No")
     @Html.TextBoxFor(x => x.FaturaSiraNo, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Tarih)
+    @Html.Label("Tarih")
     @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Saat)
+    @Html.Label("Saat")
     @Html.TextBoxFor(x => x.Saat, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.VergiDairesi)
+    @Html.Label("Vergi Dairesi")
     @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.TeslimEden)
+    @Html.Label("Teslim Eden")
     @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.TeslimAlan)
+    @Html.Label("Teslim Alan")
     @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control" })
     <br />
     <button class="btn btn-primary">Kaydet</button>

@@ -8,17 +8,17 @@
 <br />
 @using(Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" })) { 
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.PersonelAd)
+    @Html.Label("Personel Adı")
     @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.PersonelSoyad)
+    @Html.Label("Personel Soyadı")
     @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.PersonelGorsel)
+    @Html.Label("Personel Görseli")
     @*@Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })*@
-    <input  type="file" name="PersonelGorsel"/>
+    <input type="file" name="PersonelGorsel" />
     <br />
-    @Html.LabelFor(x => x.Departman)
+    @Html.Label("Departman")
     @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control" })*@
     @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
     <br />

@@ -8,19 +8,19 @@
 <h2>Yeni Kalem Giriş Sayfası</h2>
 <br />
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.Aciklama)
+    @Html.Label("Açıklama")
     @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Miktar)
+    @Html.Label("Miktar")
     @Html.TextBoxFor(x => x.Miktar, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.BİrimFiyat)
+    @Html.Label("Birim Fiyat")
     @Html.TextBoxFor(x => x.BİrimFiyat, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Tutar)
+    @Html.Label("Tutar")
     @Html.TextBoxFor(x => x.Tutar, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.FaturaID)
+    @Html.Label("Fatura ID")
     @Html.TextBoxFor(x => x.FaturaID, new { @class = "form-control" })
     <br />
     <button class="btn btn-primary">Kaydet</button>

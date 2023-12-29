@@ -31,7 +31,7 @@
             <td>@p.Adet</td>
             <td>@p.Fiyat</td>
             <td>@p.ToplamTutar</td>
-            <td>@p.Tarih</td>
+            <td>@p.Tarih.ToShortDateString()</td>
             <td><a href="~/Satis/SatisGetir/@p.SatisID" class="btn btn-warning">Güncelle</a></td>
             <td><a href="~/Satis/SatisDetay/@p.SatisID" class="btn btn-default" style="background-color:lightcoral;color:white;">Detaylar</a></td>
         </tr>
@@ -39,9 +39,7 @@
 </table>
 <a href="~/Satis/YeniSatis" class="btn btn-info">Yeni Satış Yap</a>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script
 
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />

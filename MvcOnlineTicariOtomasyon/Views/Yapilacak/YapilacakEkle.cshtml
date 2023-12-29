@@ -1,0 +1,15 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Yapilacak
+@{
+    ViewBag.Title = "YapilacakEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Yapılacak Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Yapılacak")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+

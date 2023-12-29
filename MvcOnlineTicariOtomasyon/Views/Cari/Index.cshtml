@@ -5,13 +5,11 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <br />
-<h2>Index</h2>
+
 <br />
 <table class="table table-striped">
     <tr>
-        <th>Cari ID</th>
-        <th>Ad</th>
-        <th>Soyad</th>
+        <th>Ad Soyad</th>
         <th>Şehir</th>
         <th>Mail</th>
         <th>Sil</th>
@@ -20,9 +18,7 @@
     </tr>
     @foreach(var x in Model) { 
         <tr>
-            <td>@x.CariID</td>
-            <td>@x.CardiAd</td>
-            <td>@x.CariSoyad</td>
+            <td>@x.CardiAd @x.CariSoyad</td>
             <td>@x.CariSehir</td>
             <td>@x.CariMail</td>
             <td><a href="~/Cari/CariSil/@x.CariID" class="btn btn-danger">Sil</a></td>
@@ -31,4 +27,4 @@
         </tr>
     }
 </table>
-<a class="btn btn-info" href="~/Cari/YeniCari/">Yeni Cari Ekle</a>
+<a class="btn btn-info" href="~/Cari/YeniCari/">Müşteri Ekle</a>

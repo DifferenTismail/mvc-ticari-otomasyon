@@ -22,19 +22,19 @@
                         <td>@{ SiraNo++; } @SiraNo</td>
                         <td>@x.Marka</td>
                         <td>
-                            @if (x.Sayi >= 1 && x.Sayi <= 3)
+                            @if (x.Sayi == 1)
                             {
                                 <div class="progress progress-xs">
                                     <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
                                 </div>
                             }
-                            @if (x.Sayi >= 4 && x.Sayi <= 6)
+                            @if (x.Sayi == 2)
                             {
                                 <div class="progress progress-xs">
                                     <div class="progress-bar bg-warning" style="width: 70%"></div>
                                 </div>
                             }
-                            @if (x.Sayi >= 7)
+                            @if (x.Sayi == 3)
                             {
                                 <div class="progress progress-xs progress-striped active">
                                     <div class="progress-bar bg-success" style="width: 90%"></div>
@@ -42,15 +42,15 @@
                             }
                         </td>
                         <td>
-                            @if (x.Sayi >= 1 && x.Sayi <= 3)
+                            @if (x.Sayi == 1)
                             {
                                 <span class="badge bg-danger">@x.Sayi</span>
                             }
-                            @if (x.Sayi >= 4 && x.Sayi <= 6)
+                            @if (x.Sayi == 2)
                             {
                                 <span class="badge bg-warning">@x.Sayi</span>
                             }
-                            @if (x.Sayi >= 7)
+                            @if (x.Sayi == 3)
                             {
                                 <span class="badge bg-success">@x.Sayi</span>
                             }

@@ -7,22 +7,22 @@
 @ViewBag.dgr3
 <h2>Satiş Yap</h2>
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.UrunID)
+    @Html.Label("Ürün ID")
     <input type="text" name="UrunID" value="@ViewBag.dgr2" class="form-control" readonly />
     <br />
-    @Html.LabelFor(x => x.PersonelID)
+    @Html.Label("Personel ID")
     @Html.DropDownListFor(x => x.PersonelID, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.CariID)
+    @Html.Label("Cari ID")
     @Html.TextBoxFor(x => x.CariID, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Adet)
-    <input id="adet" type="number" class="form-control" min="1" max="10" placeholder="Adet Girin" onchange="sum();" name="Adet"/>
+    @Html.Label("Adet")
+    <input id="adet" type="number" class="form-control" min="1" max="10" placeholder="Adet Girin" onchange="sum();" name="Adet" />
     <br />
-    @Html.LabelFor(x => x.Fiyat)
-    <input id="fiyat" type="text" name="Fiyat" value="@ViewBag.dgr3" class="form-control" onkeyup="sum();"/>
+    @Html.Label("Fiyat")
+    <input id="fiyat" type="text" name="Fiyat" value="@ViewBag.dgr3" class="form-control" onkeyup="sum();" />
     <br />
-    @Html.LabelFor(x => x.ToplamTutar)
+    @Html.Label("Toplam Tutar")
     <input id="toplam" type="text" name="ToplamTutar" value="0" class="form-control" readonly />
     <br />
     <button class="btn btn-primary">Satış Yap</button>

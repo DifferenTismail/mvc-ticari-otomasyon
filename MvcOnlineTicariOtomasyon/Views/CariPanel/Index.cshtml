@@ -1,43 +1,242 @@
-﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Cariler
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<Mesajlar>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_CariLayout.cshtml";
 }
+<head>
 
-<h2>Online Ticari Otomasyon Cari Bilgi Paneli</h2>
+    <script src="https://kit.fontawesome.com/c9a019f83a.js" crossorigin="anonymous"></script>
+    <link href="~/dist/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="~/dist/css/adminlte.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-@using (Html.BeginForm("Index2", "CariPanel", FormMethod.Post))
-{
-    <table class="table table-hover">
-        <tr>
-            <td>
-                <label>Mail Adresi : @HttpContext.Current.User.Identity.Name</label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                @Html.LabelFor(x => x.CardiAd)
-                @Html.TextBoxFor(x => x.CardiAd, new { @class = "form-control" })
-            </td>
-        </tr>
-        <tr>
-            <td>
-                @Html.LabelFor(x => x.CariSoyad)
-                @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
-            </td>
-        </tr>
-        <tr>
-            <td>
-                @Html.LabelFor(x => x.CariSehir)
-                @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
-            </td>
-        </tr>
-        <tr>
-            <td>
-                @Html.LabelFor(x => x.CariSifre)
-                @Html.PasswordFor(x => x.CariSifre, new { @class = "form-control" })
-            </td>
-        </tr>
-    </table>
-    <button class="btn btn-warning">Bilgilerimi Güncelle</button>
-}
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+    <div class="wrapper">
+
+        <section class="content-header">
+
+            <div class="container-fluid">
+
+                <div class="row mb-2">
+
+                    <div class="col-sm-6">
+
+                        <h1>Profilim</h1>
+
+                    </div>
+
+
+
+                </div>
+
+            </div><!-- /.container-fluid -->
+
+        </section>
+
+        <!-- Main content -->
+
+        <section class="content">
+
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-md-3">
+
+                        <!-- Profile Image -->
+
+                        <div class="card card-primary card-outline">
+
+                            <div class="card-body box-profile">
+
+                                <div class="text-center">
+                                    <img class="profile-user-img img-fluid img-circle" src="~/images/PersonelGorsel/cari.jpg" />
+
+                                </div>
+                                
+                                <h3 class="profile-username text-center">@ViewBag.AdSoyad</h3>
+
+                                <p class="text-muted text-center">@ViewBag.m</p>
+                                
+                                <ul class="list-group list-group-unbordered mb-3">
+
+                                    <li class="list-group-item">
+
+                                        <b>Toplam Satış : </b> <a class="float-right">@ViewBag.ToplamSatis</a>
+
+                                    </li>
+
+                                    <li class="list-group-item">
+
+                                        <b>Toplam Satış Tutarı : </b> <a class="float-right">@ViewBag.ToplamTutar  ₺</a>
+
+                                    </li>
+
+                                    <li class="list-group-item">
+
+                                        <b>Toplam Ürün Sayısı : </b> <a class="float-right">@ViewBag.ToplamUrunSayisi</a>
+
+                                    </li>
+
+                                </ul>
+
+                                <a href="~/CariPanel/KargoTakip/" class="btn btn-primary btn-block"><b>Kargo Takip</b></a>
+
+                            </div>
+
+                            <!-- /.card-body -->
+
+                        </div>
+
+                        <!-- /.card -->
+                        <!-- About Me Box -->
+
+                        <div class="card card-primary">
+
+                            <div class="card-header">
+
+                                <h3 class="card-title">Hakkımda</h3>
+
+                            </div>
+
+                            <!-- /.card-header -->
+
+                            <div class="card-body">
+
+                                <strong><i class="fas fa-book mr-1"></i> Meslek</strong>
+
+                                <p class="text-muted">
+
+                                    Bilgisyar Programcısı
+
+                                </p>
+
+                                <hr>
+
+                                <strong><i class="fas fa-map-marker-alt mr-1"></i>Şehir</strong>
+
+                                <p class="text-muted">Bursa</p>
+
+                                <hr>
+
+                                <strong><i class="fas fa-pencil-alt mr-1"></i> Tel No</strong>
+
+                                <p class="text-muted">(532) (123-4567)</p>
+
+                                <hr>
+
+                                <strong><i class="far fa-file-alt mr-1"></i> Duyurular</strong>
+
+                                <p class="text-muted">Yeni ürünlerimiz için web sitemisi ziyaret edin.</p>
+
+                            </div>
+                            <!-- /.card-body -->
+
+                        </div>
+
+                        <!-- /.card -->
+
+                    </div>
+
+                    <!-- /.col -->
+
+                    <div class="col-md-9">
+
+                        <div class="card">
+
+                            <div class="card-header p-2">
+
+                                <ul class="nav nav-pills">
+
+                                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Mesajlar</a></li>
+
+                                    <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Duyurular</a></li>
+
+                                    <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Ayarlar</a></li>
+
+                                </ul>
+
+                            </div><!-- /.card-header -->
+
+                            <div class="card-body">
+
+                                <div class="tab-content">
+
+                                    <div class="active tab-pane" id="activity">
+
+                                        <!-- Post -->
+                                        @foreach (var x in Model) {
+                                        <div class="post">
+                                            <div class="user-block">
+                                                <img class="img-circle img-bordered-sm"  src="~/images/PersonelGorsel/avatar.png" />
+                                                <span class="username">
+                                                    <a href="#">@x.Gonderici</a>
+                                                    <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
+                                                </span>
+                                                <span class="description">@x.Konu @x.Tarih.ToShortDateString()</span>
+                                            </div>
+
+                                            <!-- /.user-block -->
+
+                                            <p>@x.Icerik</p>
+                                        </div>
+                                        }
+                                        <!-- /.post -->
+
+                                    </div>
+
+                                    <!-- /.tab-pane -->
+
+                                    <div class="tab-pane" id="timeline">
+
+                                        <!-- The timeline -->
+
+                                        @Html.Action("Partial2", "CariPanel")
+
+                                    </div>
+
+                                    <!-- /.tab-pane -->
+
+                                    <div class="tab-pane" id="settings">
+
+                                        @Html.Action("Partial1", "CariPanel")
+
+                                    </div>
+
+                                    <!-- /.tab-pane -->
+
+                                </div>
+
+                                <!-- /.tab-content -->
+
+                            </div><!-- /.card-body -->
+
+                        </div>
+
+                        <!-- /.nav-tabs-custom -->
+
+                    </div>
+
+                    <!-- /.col -->
+
+                </div>
+
+                <!-- /.row -->
+
+            </div><!-- /.container-fluid -->
+
+        </section>
+
+        <!-- /.content -->
+
+    </div>
+    <script src="~/dist/js/jquery.min.js"></script>
+    <script src="~/dist/js/adminlte.min.js"></script>
+    <script src="~/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>

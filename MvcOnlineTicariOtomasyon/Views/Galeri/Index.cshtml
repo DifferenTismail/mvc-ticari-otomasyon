@@ -1,7 +1,7 @@
 ﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
 @model List<Urun>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "PersonelListe";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -9,35 +9,63 @@
 <html lang="tr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="~/dist/thumber/css/fancybox.min.css">
-    <link rel="stylesheet" href="~/dist/thumber/css/style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/Dist/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/Dist/dist/css/adminlte.min.css">
 </head>
-<body>
-
-    <br />
-    <div class="site-wrap">
-        <main class="main-content">
-            <div class="container-fluid photos">
-                <div class="row align-items-stretch">
-                    @foreach (var x in Model){
-                        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-                            <a href="@x.UrunGorsel" class="d-block photo-item" data-fancybox="gallery">
-                                <img src="@x.UrunGorsel" alt="Image" class="img-fluid">
-                            </a>
-                        </div>
-                    }
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        @*<h1>başlık gelebilir</h1>*@
                     </div>
+                </div>
             </div>
-        </main>
+        </section>
+        <section class="content">
+            <div class="card card-solid">
+                <div class="card-body pb-0">
+                    <div class="row">
+                        @foreach (var x in Model)
+                        {
+                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column mb-3">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="lead"><b>@x.UrunAd</b></h2>
+                                                <p>Satış Fiyatı: @x.SatisFiyati ₺</p>
+                                                <p>Alış Fiyatı: @x.AlisFiyati ₺</p>
+                                                <button class="btn btn-primary" type="submit"><a style="color:white;" href="/UrunDetay/Index/@x.UrunID">Ürün Detay</a></button>
+                                            </div>
+                                            <div class="col-5 text-center">
+                                                <img src="@x.UrunGorsel" alt="user-avatar" class="img-fluid" style="max-width: 100%; max-height: 150px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                    </div>
+                                </div>
 
-    </div> 
 
-    <script src="~/dist/thumber/js/jquery-3.3.1.min.js"></script>
-    <script src="~/dist/thumber/js/jquery.fancybox.min.js"></script>
-
-
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <aside class="control-sidebar control-sidebar-dark">
+    </aside>
+    <script src="/Dist/plugins/jquery/jquery.min.js"></script>
+    <script src="/Dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Dist/dist/js/adminlte.min.js"></script>
 </body>
 </html>
+

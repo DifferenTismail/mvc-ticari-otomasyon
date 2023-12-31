@@ -19,7 +19,7 @@
         <th>Adet</th>
         <th>Toplam</th>
         <th>Tarih</th>
-        <th>Yazdır</th>
+        @*<th>Yazdır</th>*@
     </tr>
     @foreach (var x in Model)
     {
@@ -31,7 +31,7 @@
             <td>@x.Adet</td>
             <td>@x.ToplamTutar</td>
             <td>@x.Tarih.ToShortDateString()</td>
-            <td><a href="#" class="btn btn-default" style="background-color:dodgerblue;color:white;">Yazdır</a></td>
+            @*<td><a href="#" class="btn btn-default" style="background-color:dodgerblue;color:white;">Yazdır</a></td>*@
         </tr>
     }
 </table>
